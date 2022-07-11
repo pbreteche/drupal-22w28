@@ -1,0 +1,33 @@
+uuid: 18948cf3-a500-4c1f-979b-ccdaceaebec5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.recette_de_cuisine.body
+    - field.field.node.recette_de_cuisine.field_etapes
+    - node.type.recette_de_cuisine
+  module:
+    - text
+    - user
+id: node.recette_de_cuisine.teaser
+targetEntityType: node
+bundle: recette_de_cuisine
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_etapes: true
+  langcode: true

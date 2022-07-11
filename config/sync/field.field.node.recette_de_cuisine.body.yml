@@ -1,0 +1,23 @@
+uuid: b002723e-f5e8-487a-80b4-c031f6af2910
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.recette_de_cuisine
+  module:
+    - text
+id: node.recette_de_cuisine.body
+field_name: body
+entity_type: node
+bundle: recette_de_cuisine
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

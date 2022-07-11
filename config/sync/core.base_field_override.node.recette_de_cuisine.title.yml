@@ -1,0 +1,18 @@
+uuid: a497da75-7f47-473c-a70e-9a10ed7e84d1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.recette_de_cuisine
+id: node.recette_de_cuisine.title
+field_name: title
+entity_type: node
+bundle: recette_de_cuisine
+label: 'Nom de la recette'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
