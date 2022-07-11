@@ -1,6 +1,6 @@
 _core:
   default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
-langcode: en
+langcode: fr
 uuid: d63ff64b-bec7-4553-9719-479b8b325e1a
 name: 'Formation Drupal'
 mail: admin@example.com
