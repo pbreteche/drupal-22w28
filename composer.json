@@ -20,6 +20,7 @@
         "drupal/core-composer-scaffold": "^9.4",
         "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
+        "drupal/module_filter": "^3.2",
         "drush/drush": "^11.0"
     },
     "conflict": {
@@ -92,5 +93,8 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "require-dev": {
+        "drupal/devel": "^4.1"
     }
 }

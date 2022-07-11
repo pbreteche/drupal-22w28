@@ -14,6 +14,7 @@ module:
   contextual: 0
   datetime: 0
   dblog: 0
+  devel: 0
   dynamic_page_cache: 0
   editor: 0
   field: 0
@@ -28,6 +29,7 @@ module:
   locale: 0
   menu_link_content: 0
   menu_ui: 0
+  module_filter: 0
   mysql: 0
   node: 0
   options: 0
@@ -45,6 +47,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  webprofiler: 0
   views: 10
   standard: 1000
 theme:
