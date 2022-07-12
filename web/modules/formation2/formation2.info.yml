@@ -1,0 +1,6 @@
+name: Formation 2
+type: module
+description: Un module avec une page de paramétrage
+package: Custom
+core_version_requirement: ^9 || ^10
+configure: formation2.settings_form
