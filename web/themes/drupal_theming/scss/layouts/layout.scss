@@ -1,0 +1,17 @@
+.layout-container {
+  display: flex;
+  flex-direction: column;
+
+  header[role=banner] {
+  }
+
+  .region-secondary-menu {
+    order: -1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: #123;
+    color: #fed;
+  }
+
+}

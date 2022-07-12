@@ -1,0 +1,11 @@
+a {
+  color: inherit;
+}
+
+button,
+input[type=submit],
+input[type=button] {
+  background-color: lighten(#123, 60%);
+  color: #123;
+  border: solid 1px #123;
+}
