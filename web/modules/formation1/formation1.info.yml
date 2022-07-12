@@ -1,0 +1,5 @@
+name: Module de formation n°1
+type: module
+description: Base des modules
+package: Custom
+core_version_requirement: ^9 || ^10

@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * implements HOOK_help
+ */
+function formation1_help(
+  $route_name,
+  \Drupal\Core\Routing\RouteMatchInterface $route_match
+) {
+  switch ($route_name) {
+    case 'help.page.formation1':
+      return '<p>Ceci est la page d\'aide de notre module.</p>';
+  }
+}
