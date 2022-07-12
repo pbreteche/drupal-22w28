@@ -1,0 +1,4 @@
+formation1.exemple1:
+  title: Lien 1 de formation1
+  route_name: formation1.example1
+  menu: main # emplacement à l'activation du module, peut être déplacé par l'administrateur
