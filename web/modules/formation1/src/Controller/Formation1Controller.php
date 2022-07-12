@@ -9,14 +9,8 @@ class Formation1Controller extends ControllerBase {
   public function action1()
   {
     return [
-      'header' => [
-        '#type' => 'item',
-        '#markup' => '<p>la partie "header"</p>',
-      ],
-      'body' => [
-        '#type' => 'item',
-        '#markup' => '<p>la partie "body"</p>',
-      ]
+      '#theme' => 'formation1-exemple1',
+      '#var2' => '<p>la partie "header"</p>',
     ];
   }
 }

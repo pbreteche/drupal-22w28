@@ -12,3 +12,20 @@ function formation1_help(
       return '<p>Ceci est la page d\'aide de notre module.</p>';
   }
 }
+
+/**
+ * Implements HOOK_theme.
+ *
+ * Définit les fichiers template (twig) introduit par ce module.
+ */
+function formation1_theme() {
+  return [
+    'formation1-exemple1' => [
+      'template' => 'formation1-exemple1',
+      'variables' => [
+        'var1' => 123,
+        'var2' => '',
+      ]
+    ]
+  ];
+}

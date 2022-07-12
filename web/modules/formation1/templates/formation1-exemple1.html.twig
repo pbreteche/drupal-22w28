@@ -1,0 +1,12 @@
+{#
+  Variables:
+    - var1 : integer
+    - var2 : string (default empty)
+#}
+
+<div>
+  <dl>
+    <dt>Var 1</dt><dd>{{ var1 }}</dd>
+    <dt>Var 2</dt><dd>{{ var2 | raw }}</dd>
+  </dl>
+</div>
