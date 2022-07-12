@@ -3,3 +3,16 @@
     color: red;
   }
 }
+
+.node--view-mode-teaser {
+  .node__content {
+    overflow: hidden;
+    transition: all 200ms ease;
+  }
+}
+
+.node--view-mode-teaser.collapsed {
+  .node__content {
+    height: 0;
+  }
+}

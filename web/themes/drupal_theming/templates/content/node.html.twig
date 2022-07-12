@@ -75,6 +75,7 @@
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'collapsed',
   ]
 %}
 {{ attach_library('classy/node') }}
@@ -87,6 +88,7 @@
     </h2>
   {% endif %}
   {{ title_suffix }}
+  <button class="trigger-collapse">Ouvrir/Fermer</button>
 
   <div{{ content_attributes.addClass('node__content') }}>
     {{ content }}
