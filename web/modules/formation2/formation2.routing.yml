@@ -13,3 +13,11 @@ formation2.settings_form:
     _form: 'Drupal\formation2\Form\SettingsForm'
   requirements:
     _permission: 'administer formation2 configuration'
+
+formation2.settings_advanced_form:
+  path: '/admin/config/system/formation2/advanced'
+  defaults:
+    _title: 'Formation 2 advanced settings'
+    _form: 'Drupal\formation2\Form\SettingsForm'
+  requirements:
+    _permission: 'administer formation2 advanced configuration'

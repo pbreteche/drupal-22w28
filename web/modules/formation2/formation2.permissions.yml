@@ -1,4 +1,8 @@
 administer formation2 configuration:
   title: 'Administer formation2 configuration'
   description: 'Optional description.'
+
+administer formation2 advanced configuration:
+  title: 'Administer formation2 advanced configuration'
+  description: 'Seulement pour administrateur avancé.'
   restrict access: true

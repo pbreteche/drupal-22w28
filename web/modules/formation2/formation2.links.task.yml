@@ -1,0 +1,9 @@
+formation2.default_view:
+  title: 'Formation 2'
+  route_name: formation2.settings_form
+  base_route: formation2.settings_form
+
+formation2.advanced_view:
+  title: 'Formation 2, configuration avancée'
+  route_name: formation2.settings_advanced_form # À créer, un second formulaire
+  base_route: formation2.settings_form
