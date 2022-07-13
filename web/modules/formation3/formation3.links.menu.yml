@@ -1,0 +1,6 @@
+formation3.add_example:
+  title: 'Formation 3 add example'
+  description: 'Formation 3.'
+  menu: admin
+  route_name: formation3.example_add
+

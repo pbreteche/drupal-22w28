@@ -1,0 +1,15 @@
+formation3.example:
+  path: '/formation3/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\formation3\Controller\Formation3Controller::build'
+  requirements:
+    _permission: 'access content'
+
+formation3.example_add:
+  path: '/formation3/example/add'
+  defaults:
+    _title: 'Add example'
+    _form: 'Drupal\formation3\Form\ExampleForm'
+  requirements:
+    _permission: 'access content'
