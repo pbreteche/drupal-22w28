@@ -1,2 +1,5 @@
 services:
 
+  formation3.example_loader:
+    class: Drupal\formation3\ExampleLoader
+    arguments: ['@database']

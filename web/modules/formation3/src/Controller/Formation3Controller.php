@@ -3,6 +3,8 @@
 namespace Drupal\formation3\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\formation3\ExampleLoader;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Returns responses for Formation 3 routes.
@@ -10,25 +12,30 @@ use Drupal\Core\Controller\ControllerBase;
 class Formation3Controller extends ControllerBase {
 
   /**
+   * @var \Drupal\formation3\ExampleLoader
+   */
+  private ExampleLoader $loader;
+
+  public function __construct(ExampleLoader $loader) {
+    $this->loader = $loader;
+  }
+
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('formation3.example_loader')
+    );
+  }
+
+  /**
    * Builds the response.
    */
   public function build() {
-
-    /** @var \Drupal\Core\Database\Connection $connection */
-    $connection = \Drupal::service('database');
-
-    $result = $connection->select('formation3_example')
-      ->fields('formation3_example', ['id', 'uid', 'type', 'status', 'created'])
-      ->condition('status', 1)
-      ->execute()
-    ;
+    $result = $this->loader->load();
 
     $output = 'Texte example par défaut';
     foreach ($result as $row) {
       $output = date('d/m/Y', $row->created);
     }
-
-    dpm($output);
 
     $build['content'] = [
       '#type' => 'item',

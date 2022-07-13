@@ -49,16 +49,11 @@ class ExampleBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    /** @var \Drupal\Core\Database\Connection $connection */
-    $connection = \Drupal::service('database');
+    /** @var \Drupal\formation3\ExampleLoader $loader */
+    $loader = \Drupal::service('formation3.example_loader');
     $config = $this->getConfiguration();
 
-    $result = $connection->select('formation3_example')
-      ->fields('formation3_example', ['id', 'uid', 'type', 'status', 'created'])
-      ->condition('status', 1)
-      ->range(0, $config['max elements'])
-      ->execute()
-    ;
+    $result = $loader->load($config['max elements']);
 
     $items = [];
 
