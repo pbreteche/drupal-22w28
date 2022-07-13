@@ -1,0 +1,5 @@
+name: Instant Message
+type: module
+description: Provide an internal user to user message feature.
+package: Custom
+core_version_requirement: ^9 || ^10

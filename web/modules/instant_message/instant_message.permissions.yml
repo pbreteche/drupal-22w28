@@ -1,0 +1,8 @@
+access instant_message:
+  title: 'Access instant_message'
+  description: 'Let user send and received messages.'
+
+administer instant_message configuration:
+  title: 'Administer instant_message configuration'
+  description: 'Optional description.'
+  restrict access: true

@@ -1,0 +1,8 @@
+entity.formation3.view:
+  title: Inbox
+  route_name: instant_message.inbox
+  base_route: instant_message.inbox
+entity.formation3.edit_form:
+  title: Compose
+  route_name: instant_message.composer
+  base_route: instant_message.inbox

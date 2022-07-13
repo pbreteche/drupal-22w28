@@ -1,0 +1,84 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Instant Message module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function instant_message_install() {
+  \Drupal::messenger()->addStatus(__FUNCTION__);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function instant_message_uninstall() {
+  \Drupal::messenger()->addStatus(__FUNCTION__);
+}
+
+/**
+ * Implements hook_schema().
+ */
+function instant_message_schema() {
+  $schema['instant_message_example'] = [
+    'description' => 'Table description.',
+    'fields' => [
+      'mid' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key: Unique record ID.',
+      ],
+      'from_uid' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'The {users}.uid of the user the message is from.',
+      ],
+      'to_uid' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'The {users}.uid of the user the message is sent to.',
+      ],
+      'read' => [
+        'description' => 'Boolean indicating whether this message is read.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'size' => 'tiny',
+      ],
+      'subject' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Subject of the message.',
+      ],
+      'sent' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Timestamp when the message was sent.',
+      ],
+      'body' => [
+        'type' => 'text',
+        'not null' => TRUE,
+        'description' => 'The body for the message.',
+      ],
+    ],
+    'primary key' => ['mid'],
+    'indexes' => [
+      'from_uid' => ['from_uid'],
+      'to_uid' => ['to_uid'],
+      'sent' => ['sent'],
+    ],
+  ];
+
+  return $schema;
+}

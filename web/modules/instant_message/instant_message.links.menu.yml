@@ -1,0 +1,12 @@
+instant_message.inbox:
+  title: 'Instant Message Inox'
+  description: 'Read your Messages.'
+  route_name: instant_message.inbox
+  weight: 10
+
+instant_message.settings_form:
+  title: 'Instant Message'
+  description: 'Configure Instant Message.'
+  parent: system.admin_config_system
+  route_name: instant_message.settings_form
+  weight: 10

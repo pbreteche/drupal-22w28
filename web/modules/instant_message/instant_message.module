@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Instant Message module.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function instant_message_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the instant message module.
+    case 'help.page.instant_message':
+      return '<p>'.t('Message is sent from your Drupal account to another. It does not need any external provider.').'</p>';
+
+    // Help for another path in the instant message module.
+    case 'instant_message.admin_display':
+      return '<p>'.t('You can manage messages configuration here.').'</p>';
+  }
+}

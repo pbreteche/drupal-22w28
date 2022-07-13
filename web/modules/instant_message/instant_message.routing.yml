@@ -1,0 +1,23 @@
+instant_message.inbox:
+  path: '/instant-message'
+  defaults:
+    _title: 'Inbox'
+    _controller: '\Drupal\instant_message\Controller\InstantMessageController::inbox'
+  requirements:
+    _permission: 'access instant_message'
+
+instant_message.composer:
+  path: '/instant-message/compose'
+  defaults:
+    _title: 'Compose'
+    _form: 'Drupal\instant_message\Form\ComposeForm'
+  requirements:
+    _permission: 'access instant_message'
+
+instant_message.settings_form:
+  path: '/admin/config/system/instant-message'
+  defaults:
+    _title: 'Instant Message settings'
+    _form: 'Drupal\instant_message\Form\SettingsForm'
+  requirements:
+    _permission: 'administer instant_message configuration'
