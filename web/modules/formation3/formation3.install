@@ -59,6 +59,12 @@ function formation3_schema() {
         'default' => 0,
         'description' => 'Timestamp when the record was created.',
       ],
+      'updated' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Timestamp when the record was created.',
+      ],
     ],
     'primary key' => ['id'],
     'indexes' => [
@@ -95,4 +101,19 @@ function formation3_requirements($phase) {
   }
 
   return $requirements;
+}
+
+/**
+ * Implements hook_update_N().
+ */
+function formation3_update_9001(&$sandbox) {
+  $updatedColumn = [
+    'type' => 'int',
+    'not null' => TRUE,
+    'default' => 0,
+    'description' => 'Timestamp when the record was created.',
+  ];
+
+  $schema = Drupal::service('database')->schema();
+  $schema->addField('formation3_example', 'updated', $updatedColumn);
 }
