@@ -14,9 +14,25 @@ class Formation3Controller extends ControllerBase {
    */
   public function build() {
 
+    /** @var \Drupal\Core\Database\Connection $connection */
+    $connection = \Drupal::service('database');
+
+    $result = $connection->select('formation3_example')
+      ->fields('formation3_example', ['id', 'uid', 'type', 'status', 'created'])
+      ->condition('status', 1)
+      ->execute()
+    ;
+
+    $output = 'Texte example par défaut';
+    foreach ($result as $row) {
+      $output = date('d/m/Y', $row->created);
+    }
+
+    dpm($output);
+
     $build['content'] = [
       '#type' => 'item',
-      '#markup' => $this->t('It works!'),
+      '#markup' => $output,
     ];
 
     return $build;
