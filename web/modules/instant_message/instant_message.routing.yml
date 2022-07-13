@@ -6,6 +6,18 @@ instant_message.inbox:
   requirements:
     _permission: 'access instant_message'
 
+instant_message.show:
+  path: '/instant-message/{message}'
+  defaults:
+    _title_callback: 'Inbox'
+    _controller: '\Drupal\instant_message\Controller\InstantMessageController::show'
+  requirements:
+    _permission: 'access instant_message'
+  options:
+    parameters:
+      message:
+        type: message
+
 instant_message.composer:
   path: '/instant-message/compose'
   defaults:

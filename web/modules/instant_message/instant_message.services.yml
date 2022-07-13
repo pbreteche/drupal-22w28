@@ -1,0 +1,6 @@
+services:
+  instant_message.param_converter:
+    class: Drupal\instant_message\MessageParamConverter
+    arguments: ['@database']
+    tags:
+      - { name: paramconverter }

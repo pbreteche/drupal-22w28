@@ -1,0 +1,14 @@
+<table>
+  <thead>
+  <tr><th>mid</th><th>subject</th><th>sent</th></tr>
+  </thead>
+  <tbody>
+  {% for message in messages %}
+  <tr>
+    <td>{{ message.mid }}</td>
+    <td><a href="{{ path('instant_message.show', {message: message.mid}) }}">{{ message.subject }}</a></td>
+    <td>{{ message.sent|format_date }}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
